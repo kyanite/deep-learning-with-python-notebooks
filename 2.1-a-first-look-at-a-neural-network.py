@@ -31,6 +31,12 @@ from keras.datasets import mnist
 
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 
+# %%
+digit = train_images[4]
+import matplotlib.pyplot as plt
+plt.imshow(digit, cmap=plt.cm.get_cmap("binary"))
+plt.show()
+
 # %% [markdown]
 # `train_images` and `train_labels` form the "training set", the data that the model will learn from. The model will then be tested on the 
 # "test set", `test_images` and `test_labels`. Our images are encoded as Numpy arrays, and the labels are simply an array of digits, ranging 
